@@ -1,5 +1,8 @@
 import maya.mel as mel
 import maya.OpenMaya as om
+import maya.cmds as cmds
+
+dir = cmds.internalVar(usd=True) + 'modules/saveClearHistory/config.ini'
 
 def handle_save(*args):
   mel.eval("BakeAllNonDefHistory;")
